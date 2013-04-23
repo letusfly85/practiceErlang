@@ -6,4 +6,11 @@
 % 遠隔のサーバに成功したことを伝えるスクリプトを作成する
 
 check_my_file() ->
-    io:format("~p~n", [is_file("BUILD_SUCCESS")]).
+    io:format("~p~n", [is_file("BUILD_SUCCESS")]),
+
+    case is_file("BUILD_SUCCESS") of
+        true  ->
+            io:format("~p~n", ["build success!"]);
+        false ->
+            io:format("~p~n", ["build failure!"])
+    end.
