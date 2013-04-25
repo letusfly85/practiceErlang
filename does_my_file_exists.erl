@@ -4,6 +4,7 @@
 
 % BUILD_SUCCESS という空ファイルが出来たら
 % 遠隔のサーバに成功したことを伝えるスクリプトを作成する
+%
 
 check_my_file(Pid) ->
     case is_file("BUILD_SUCCESS") of
